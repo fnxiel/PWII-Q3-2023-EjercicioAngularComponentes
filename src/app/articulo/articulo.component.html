@@ -1,0 +1,12 @@
+<div>
+<h1>{{articulo.titulo}}</h1>
+<app-seccion [tituloSeccion]="articulo.tituloSeccion" [contenido]="articulo.contenido"></app-seccion>
+<app-enlace [enlace]="articulo.enlace"></app-enlace>
+<div>
+  <p [class.elemento-like]="likes > 0" >{{likes}} Cantidad de likes</p>
+  <p *ngIf="likes > 0" class="elemento-like">Te gusta este articulo</p>
+</div>
+
+<button (click)="like()">Like</button>
+<button (click)="cambiarTitulo()">Cambiar titulo</button>
+</div>
